@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0"> 
+	<title>Thanh toán</title> 
+	<link rel="stylesheet" href="CSS/thanhtoan.css"> 
+	<link rel="icon" href="Images/Red Modern Hot Spicy Chicken Logo.png">
+</head> 
+
+<body> 
+	<div class="container"> 
+
+		<form action="#"> 
+
+			<div class="row"> 	
+
+				<div class="col"> 
+					<h3 class="title"> 
+						Thông tin người thanh toán
+					</h3> 
+
+					<div class="inputBox"> 
+						<label for="name"> 
+							Họ và Tên 
+						</label> 
+						<input type="text" id="name"
+							placeholder="Họ và Tên"
+							required> 
+					</div> 
+
+					<div class="inputBox"> 
+						<label for="email"> 
+							Email: 
+						</label> 
+						<input type="text" id="email"
+							placeholder="Địa chỉ Email"
+							required> 
+					</div> 
+
+					<div class="inputBox"> 
+						<label for="address"> 
+							Địa chỉ giao hàng
+						</label> 
+						<input type="text" id="address"
+							placeholder="Địa chỉ giao hàng"
+							required> 
+					</div> 
+
+					<div class="inputBox"> 
+						<label for="Thành phố"> 
+							Thành Phố
+						</label> 
+						<input type="text" id="city"
+							placeholder="Thành phố"
+							required> 
+					</div> 
+
+					<div class="flex"> 
+
+						<div class="inputBox"> 
+							<label for="Khu vực"> 
+								Khu vực
+							</label> 
+							<input type="text" id="state"
+								placeholder="Khu vực"
+								required> 
+						</div> 
+
+						<div class="inputBox"> 
+							<label for="zip"> 
+								Mã sản phẩm 
+							</label> 
+							<input type="number" id="zip"
+								placeholder="123 456"
+								required> 
+						</div> 
+
+					</div> 
+
+				</div> 
+				<div class="col"> 
+					<h3 class="title">Hình thức thanh toán</h3> 
+
+					<div class="inputBox"> 
+						<label for="name"> 
+							Lựa chọn ngân hàng 
+						</label> 
+						<img src="Images/9d8ed5_0b8d05c940514711b9e1d09684a2d744~mv2.jpg"
+							alt="credit/debit card image"> 
+                            <img src="Images/9d8ed5_2e22356b5e58495a897e6c87ce1d2ad3~mv2.webp"
+							alt="credit/debit card image"> 
+                            <img src="Images/a27d24_9e537ac8284c4b72812c055be756989c~mv2.jpg"
+							alt="credit/debit card image"> 
+                            <img src="Images/9d8ed5_b06650973df3498db2315ec1ab339728~mv2.jpg"
+							alt="credit/debit card image"> 
+					</div> 
+
+					<div class="inputBox"> 
+						<label for="cardName"> 
+							 
+						</label> 
+						<input type="text" id="cardName"
+							placeholder="Tên tài khoản"
+							required> 
+					</div> 
+
+					<div class="inputBox"> 
+						<label for="cardNum"> 
+							Số tài khoản 
+						</label> 
+						<input type="text" id="cardNum"
+							placeholder="1111-2222-3333-4444"
+							maxlength="20" required> 
+					</div> 
+ 
+		</form> 
+
+	</div> 
+	<input type="submit" value="Xác nhận thanh toán"
+				class="submit_btn"> 
+	<div class="QR"> 
+		<p>Hoặc thanh toán qua QR</p>
+		<p>Chủ tài khoản: Lê Anh Đức</p>
+		<p>Số tài khoản:3447617735394 MB bank</p>
+		<img src="Images/5c9aeb11ea0e46501f1f.jpg" alt="QR Images">
+	</div>
+	
+	<script>
+        let cardNumInput = 
+	document.querySelector('#cardNum') 
+
+cardNumInput.addEventListener('keyup', () => { 
+	let cNumber = cardNumInput.value 
+	cNumber = cNumber.replace(/\s/g, "") 
+
+	if (Number(cNumber)) { 
+		cNumber = cNumber.match(/.{1,4}/g) 
+		cNumber = cNumber.join(" ") 
+		cardNumInput.value = cNumber 
+	} 
+})
+
+    </script>
+</body>
+
+</html>
